@@ -12,21 +12,16 @@ import './style/style.css';
 
 export const RootApp = (props) => {
 
-    let sidebar = document.querySelector(".sidebar");
-    let closeBtn = document.querySelector("#btn");
-    let searchBtn = document.querySelector(".bx-search");
-
-
     const sideBarEvent = () => {
-        sidebar.classList.toggle('open')
+        document.querySelector(".sidebar").classList.toggle('open')
         menuBtnChange()
     }
 
     const menuBtnChange = () => {
-        if (sidebar.classList.contains("open")) {
-            closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+        if ( document.querySelector(".sidebar").classList.contains("open")) {
+            document.querySelector("#btn").classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
         } else {
-            closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+            document.querySelector("#btn").classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
         }
     }
 
@@ -34,7 +29,7 @@ export const RootApp = (props) => {
     return (
         <HashRouter>
             <div>
-                <div className="sidebar open">
+                <div className="sidebar">
                     <div className="logo-details">
                         <i className='bx bxl-c-plus-plus icon'></i>
                         <div className="logo_name">CodingLab</div>
