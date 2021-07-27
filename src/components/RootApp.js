@@ -6,7 +6,7 @@ import {
     HashRouter
 } from "react-router-dom";
 import Dashboard from './pages/Dashboard';
-import Admionistrator from './pages/Admionistrator';
+import Admionistrator from './pages/Administrator';
 
 import './style/style.css';
 
@@ -29,69 +29,37 @@ export const RootApp = (props) => {
     return (
         <HashRouter>
             <div>
-                <div className="sidebar">
-                    <div className="logo-details">
+                <div className="sidebar open">
+                    {/* <div className="logo-details">
                         <i className='bx bxl-c-plus-plus icon'></i>
                         <div className="logo_name">CodingLab</div>
                         <i className='bx bx-menu' id="btn" onClick={sideBarEvent}></i>
-                    </div>
+                    </div> */}
                     <ul className="nav-list">
-                        <li>
-                            <i className='bx bx-search' ></i>
-                            <input type="text" placeholder="Search..." />
-                            <span className="tooltip">Search</span>
-                        </li>
                         <li>
                             <a href="#">
                                 <NavLink to="/administrator">
                                     <i className='bx bx-grid-alt'></i>
-                                    <span className="links_name">Dashboard</span>
+                                    <span className="links_name">Trigatra</span>
                                 </NavLink>
                             </a>
-                            <span className="tooltip">Dashboard</span>
+                            <span className="tooltip">Trigatra</span>
                         </li>
                         <li>
                             <a href="#">
                                 <i className='bx bx-user' ></i>
-                                <span className="links_name">User</span>
+                                <span className="links_name">Pancagatra</span>
                             </a>
-                            <span className="tooltip">User</span>
+                            <span className="tooltip">Pancagatra</span>
                         </li>
                         <li>
                             <a href="#">
                                 <i className='bx bx-chat' ></i>
-                                <span className="links_name">Messages</span>
+                                <span className="links_name">Covid 19</span>
                             </a>
-                            <span className="tooltip">Messages</span>
+                            <span className="tooltip">Covid 19</span>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i className='bx bx-pie-chart-alt-2' ></i>
-                                <span className="links_name">Analytics</span>
-                            </a>
-                            <span className="tooltip">Analytics</span>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i className='bx bx-folder' ></i>
-                                <span className="links_name">File Manager</span>
-                            </a>
-                            <span className="tooltip">Files</span>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i className='bx bx-cart-alt' ></i>
-                                <span className="links_name">Order</span>
-                            </a>
-                            <span className="tooltip">Order</span>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i className='bx bx-heart' ></i>
-                                <span className="links_name">Saved</span>
-                            </a>
-                            <span className="tooltip">Saved</span>
-                        </li>
+                       
                         <li>
                             <a href="#">
                                 <i className='bx bx-cog' ></i>
@@ -99,16 +67,7 @@ export const RootApp = (props) => {
                             </a>
                             <span className="tooltip">Setting</span>
                         </li>
-                        <li className="profile">
-                            <div className="profile-details">
-                                <img src="profile.jpg" alt="profileImg" />
-                                <div className="name_job">
-                                    <div className="name">Prem Shahi</div>
-                                    <div className="job">Web designer</div>
-                                </div>
-                            </div>
-                            <i className='bx bx-log-out' id="log_out" ></i>
-                        </li>
+                       
                     </ul>
                 </div>
                 <section className="home-section">

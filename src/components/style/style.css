@@ -9,16 +9,16 @@
 .sidebar {
     position: fixed;
     left: 0;
-    top: 0;
-    height: 100%;
-    width: 78px;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
     background: #11101d;
     padding: 6px 14px;
     z-index: 99;
     transition: all 0.5s ease;
 }
 .sidebar.open {
-    width: 250px;
+    width: 100%;
 }
 .sidebar .logo-details {
     height: 60px;
@@ -65,13 +65,17 @@
     line-height: 60px;
 }
 .sidebar .nav-list {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     height: 100%;
+    display: flex;
 }
 .sidebar li {
     position: relative;
     margin: 8px 0;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 25%;
 }
 .sidebar li .tooltip {
     position: absolute;
@@ -141,13 +145,14 @@
     text-decoration: none;
     transition: all 0.4s ease;
     background: #11101d;
+    flex-direction: column;
 }
 .sidebar li a:hover {
     background: #fff;
 }
 .sidebar li a .links_name {
     color: #fff;
-    font-size: 15px;
+    font-size: 0.7rem;
     font-weight: 400;
     white-space: nowrap;
     opacity: 0;
@@ -224,17 +229,15 @@
 .home-section {
     position: relative;
     background: #e4e9f7;
-    min-height: 100vh;
     top: 0;
-    left: 78px;
-    width: calc(100% - 78px);
+    width: 100%;
     transition: all 0.5s ease;
     z-index: 2;
-    padding: 50px;
+    padding: 25px;
+    min-height: 100vh;
 }
 .sidebar.open ~ .home-section {
-    left: 250px;
-    width: calc(100% - 250px);
+    width: 100%;
 }
 .home-section .text {
     display: inline-block;
@@ -242,4 +245,56 @@
     font-size: 25px;
     font-weight: 500;
     margin: 18px;
+}
+
+.main-content {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* Table */
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04aa6d;
+    color: white;
+}
+
+
+.w-30 {
+    width: 40%;
+}
+
+.w-60 {
+    width: 70%;
+}
+
+.p-20{
+    padding: 20px;
 }
