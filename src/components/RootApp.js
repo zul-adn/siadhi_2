@@ -6,7 +6,8 @@ import {
     HashRouter
 } from "react-router-dom";
 import Dashboard from './pages/Dashboard';
-import Admionistrator from './pages/Administrator';
+import Pancagatra from './pages/Administrator';
+import Covid from './pages/Covid';
 
 import './style/style.css';
 
@@ -18,7 +19,7 @@ export const RootApp = (props) => {
     }
 
     const menuBtnChange = () => {
-        if ( document.querySelector(".sidebar").classList.contains("open")) {
+        if (document.querySelector(".sidebar").classList.contains("open")) {
             document.querySelector("#btn").classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
         } else {
             document.querySelector("#btn").classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
@@ -38,7 +39,7 @@ export const RootApp = (props) => {
                     <ul className="nav-list">
                         <li>
                             <a href="#">
-                                <NavLink to="/administrator">
+                                <NavLink to="/">
                                     <i className='bx bx-grid-alt'></i>
                                     <span className="links_name">Trigatra</span>
                                 </NavLink>
@@ -47,32 +48,29 @@ export const RootApp = (props) => {
                         </li>
                         <li>
                             <a href="#">
-                                <i className='bx bx-user' ></i>
-                                <span className="links_name">Pancagatra</span>
+                                <NavLink to="/pancagatra">
+                                    <i className='bx bx-user' ></i>
+                                    <span className="links_name">Pancagatra</span>
+                                </NavLink>
                             </a>
                             <span className="tooltip">Pancagatra</span>
                         </li>
                         <li>
                             <a href="#">
-                                <i className='bx bx-chat' ></i>
-                                <span className="links_name">Covid 19</span>
+                                <NavLink to="/covid">
+                                    <i className='bx bx-chat' ></i>
+                                    <span className="links_name">Covid 19</span>
+                                </NavLink>
                             </a>
                             <span className="tooltip">Covid 19</span>
                         </li>
-                       
-                        <li>
-                            <a href="#">
-                                <i className='bx bx-cog' ></i>
-                                <span className="links_name">Setting</span>
-                            </a>
-                            <span className="tooltip">Setting</span>
-                        </li>
-                       
+
                     </ul>
                 </div>
                 <section className="home-section">
                     <Route exact path="/" component={Dashboard} />
-                    <Route path="/administrator" component={Admionistrator} />
+                    <Route path="/pancagatra" component={Pancagatra} />
+                    <Route path="/covid" component={Covid} />
                 </section>
             </div>
         </HashRouter>
