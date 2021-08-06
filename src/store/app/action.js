@@ -4,6 +4,7 @@ const url = 'https://dinartech.com/siadhi/public/api'
 
 const storeDataGeo = (payload, chart) => ({ type: 'STORE_DATA_GEO', datas: payload, luas_chart: chart })
 const storeDataPenduduk = (payload) => ({ type: 'STORE_DATA_PEN', datas: payload })
+const storeDataTempatIbadah = (payload) => ({ type: 'STORE_DATA_TEMPAT_IBADAH', datas: payload })
 
 export const getDataGeo = () => {
     return (dispatch) => {
@@ -25,6 +26,16 @@ export const getDataPen = () => {
             .then(response => {
                 console.log(response.data)
                 dispatch(storeDataPenduduk(response.data)) 
+            })
+    }
+}
+
+export const getTempatIbadah = () => {
+    return (dispatch) => {
+        axios.get(`${url}/gettempatibadah`)
+            .then(response => {
+                console.log(response.data)
+                dispatch(storeDataTempatIbadah(response.data.data)) 
             })
     }
 }

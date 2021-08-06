@@ -1,7 +1,8 @@
 const initialState = {
     datas_geo: [],
     luas_chart: [],
-    datas_pen: []
+    datas_pen: [],
+    datas_tempat_ibadah: []
 }
 
 export default (state = initialState, action) => {
@@ -16,6 +17,11 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 datas_pen: action.datas,
+            }
+        case 'STORE_DATA_TEMPAT_IBADAH':
+            return {
+                ...state,
+                datas_tempat_ibadah: action.datas,
             }
         default:
             return state

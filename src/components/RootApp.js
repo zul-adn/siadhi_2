@@ -6,7 +6,7 @@ import {
     HashRouter
 } from "react-router-dom";
 import Dashboard from './pages/Dashboard';
-import Pancagatra from './pages/Administrator';
+import Pancagatra from './pages/Pancagatra';
 import Covid from './pages/Covid';
 
 import './style/style.css';
@@ -55,10 +55,19 @@ export const RootApp = (props) => {
                             </a>
                             <span className="tooltip">Pancagatra</span>
                         </li>
+
                         <li>
                             <a href="#">
+                                <NavLink to="/pancagatra">
+                                    <i className='bx bx-calendar' ></i>
+                                    <span className="links_name">Kalender</span>
+                                </NavLink>
+                            </a>
+                            <span className="tooltip">Kalender</span>
+                        </li>                        <li>
+                            <a href="#">
                                 <NavLink to="/covid">
-                                    <i className='bx bx-chat' ></i>
+                                    <i className='bx bxs-virus' ></i>
                                     <span className="links_name">Covid 19</span>
                                 </NavLink>
                             </a>

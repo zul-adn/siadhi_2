@@ -177,7 +177,7 @@ function Dashboard({ getDataGeo, datas_geo, luas_chart, getDataPen, datas_pen })
                 </div>
                 <div className="flex-row">
                     <div className="w-40 p-20 ">
-                        <div className="card p-20 w-100 bg-green flex-column">
+                        <div className="cards p-20 w-100 bg-green flex-column">
                             <NumberFormat
                                 value={datas_pen.length !== 0 ? parseInt(datas_pen.data[0].total_perempuan[0].total_perempuan) + parseInt(datas_pen.data[0].total_laki[0].total_laki) : ''}
                                 displayType={'text'}
@@ -187,8 +187,8 @@ function Dashboard({ getDataGeo, datas_geo, luas_chart, getDataPen, datas_pen })
                             <br />
                             <p>Jumlah Penduduk Kota Singkawang</p>
                         </div>
-                        <div className="card flex-row w-100">
-                            <div className="card bg-blue p-20 w-50 flex-col" style={{ textAlign: 'center' }} >
+                        <div className="cards flex-row w-100">
+                            <div className="cards bg-blue p-20 w-50 flex-col" style={{ textAlign: 'center' }} >
                                 <div className="w-100">
                                     <img src={man} className="w-100" />
                                 </div>
@@ -202,7 +202,7 @@ function Dashboard({ getDataGeo, datas_geo, luas_chart, getDataPen, datas_pen })
                                     <p>Laki laki</p>
                                 </div>
                             </div>
-                            <div className="card bg-pink p-20 w-50 flex-col" style={{ textAlign: 'center' }} >
+                            <div className="cards bg-pink p-20 w-50 flex-col" style={{ textAlign: 'center' }} >
                                 <div className="w-100">
                                     <img src={woman} className="w-100" />
                                 </div>
@@ -230,10 +230,10 @@ function Dashboard({ getDataGeo, datas_geo, luas_chart, getDataPen, datas_pen })
                             <div key={i} className="flex-row border-grey mb-20 w-100 ">
 
                                 <div className="flex-col w-40 pr-10">
-                                    <div className="card p-20 w-100 bg-imperial flex-column">
+                                    <div className="cards p-20 w-100 bg-imperial flex-column">
                                         <span >{v.nama_kecamatan} </span>
                                     </div>
-                                    <div className="card p-20 w-100 bg-blue flex-column">
+                                    <div className="cards p-20 w-100 bg-blue flex-column">
                                         <NumberFormat
                                             value={v.jumlah_penduduk[0].jumlah_laki}
                                             displayType={'text'}
@@ -243,7 +243,7 @@ function Dashboard({ getDataGeo, datas_geo, luas_chart, getDataPen, datas_pen })
                                         <br />
                                         <p>Laki Laki</p>
                                     </div>
-                                    <div className="card p-20 w-100 bg-pink flex-column">
+                                    <div className="cards p-20 w-100 bg-pink flex-column">
                                         <NumberFormat
                                             value={v.jumlah_penduduk[0].jumlah_perempuan}
                                             displayType={'text'}
@@ -253,7 +253,7 @@ function Dashboard({ getDataGeo, datas_geo, luas_chart, getDataPen, datas_pen })
                                         <br />
                                         <p>Perempuan</p>
                                     </div>
-                                    <div className="card p-20 w-100 bg-green flex-column">
+                                    <div className="cards p-20 w-100 bg-green flex-column">
                                         <NumberFormat
                                             value={parseInt(v.jumlah_penduduk[0].jumlah_perempuan) + parseInt(v.jumlah_penduduk[0].jumlah_laki)}
                                             displayType={'text'}
