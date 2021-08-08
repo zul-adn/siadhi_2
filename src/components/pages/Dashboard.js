@@ -1,7 +1,7 @@
 import React from 'react';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 import { connect } from "react-redux";
-import { getDataGeo, getDataPen } from './../../store/app/action';
+import { getDataGeo, getDataPen, getAgama } from './../../store/app/action';
 import NumberFormat from 'react-number-format';
 
 import man from './../assets/img/svg/dutch-man.svg';
@@ -17,11 +17,12 @@ const data = [
     { name: 'Group D', value: 200 },
 ];
 
-function Dashboard({ getDataGeo, datas_geo, luas_chart, getDataPen, datas_pen }) {
+function Dashboard({ getDataGeo, datas_geo, luas_chart, getDataPen, datas_pen, getAgama, datas_agama }) {
 
     React.useEffect(() => {
         getDataGeo()
         getDataPen()
+        getAgama()
         console.log(luas_chart)
     }, [])
 
@@ -319,7 +320,87 @@ function Dashboard({ getDataGeo, datas_geo, luas_chart, getDataPen, datas_pen })
                     <p>Agama</p>
                 </div>
                 <div className="flex-row">
+                    <div className="flex-col p-20 w-100">
 
+                        <div className="flex-row p-20">
+                            <div className="w-100" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <table id="customers2">
+                                    <tr  style={{ textAlign:'center' }}>
+                                        <th>Kecamatan</th>
+                                        <th>Islam</th>
+                                        <th>Kristen</th>
+                                        <th>Khatolik</th>
+                                        <th>Hindu</th>
+                                        <th>Budha</th>
+                                        <th>Kong Hu Chu</th>
+                                        <th>Aliran Kepercayaan</th>
+                                    </tr>
+                                    {datas_agama.map((v, i) =>
+                                        <tr key={i} >
+                                            <td>{v.nama_kecamatan}</td>
+                                            <td>
+                                                <NumberFormat
+                                                    value={v.islam}
+                                                    displayType={'text'}
+                                                    thousandSeparator={true}
+                                                    renderText={formattedValue => <>{formattedValue} </>}
+                                                />
+                                            </td>
+                                            <td>
+                                                <NumberFormat
+                                                    value={v.kristen}
+                                                    displayType={'text'}
+                                                    thousandSeparator={true}
+                                                    renderText={formattedValue => <>{formattedValue} </>}
+                                                />
+                                            </td>
+                                            <td>
+                                                <NumberFormat
+                                                    value={v.katholik}
+                                                    displayType={'text'}
+                                                    thousandSeparator={true}
+                                                    renderText={formattedValue => <>{formattedValue} </>}
+                                                />
+                                            </td>
+                                            <td>
+                                                <NumberFormat
+                                                    value={v.hindu}
+                                                    displayType={'text'}
+                                                    thousandSeparator={true}
+                                                    renderText={formattedValue => <>{formattedValue} </>}
+                                                />
+                                            </td>
+                                            <td>
+                                                <NumberFormat
+                                                    value={v.budha}
+                                                    displayType={'text'}
+                                                    thousandSeparator={true}
+                                                    renderText={formattedValue => <>{formattedValue} </>}
+                                                />
+                                            </td>
+                                            <td>
+                                                <NumberFormat
+                                                    value={v.konghuchu}
+                                                    displayType={'text'}
+                                                    thousandSeparator={true}
+                                                    renderText={formattedValue => <>{formattedValue} </>}
+                                                />
+                                            </td>
+                                            <td>
+                                                <NumberFormat
+                                                    value={v.alirankepercayaan}
+                                                    displayType={'text'}
+                                                    thousandSeparator={true}
+                                                    renderText={formattedValue => <>{formattedValue} </>}
+                                                />
+                                            </td>
+                                        </tr>
+                                    )}
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -354,14 +435,16 @@ const mapStateToProps = ({ app }) => {
     return {
         datas_geo: app.datas_geo,
         luas_chart: app.luas_chart,
-        datas_pen: app.datas_pen
+        datas_pen: app.datas_pen,
+        datas_agama: app.datas_agama
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         getDataGeo: () => dispatch(getDataGeo()),
-        getDataPen: () => dispatch(getDataPen())
+        getDataPen: () => dispatch(getDataPen()),
+        getAgama: () => dispatch(getAgama())
     }
 };
 
