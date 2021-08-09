@@ -4,6 +4,8 @@
   "homepage": "http://zul-adn.github.io/siadhi_2",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@ericz1803/react-google-calendar": "^4.2.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

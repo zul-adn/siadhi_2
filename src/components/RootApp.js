@@ -8,6 +8,7 @@ import {
 import Dashboard from './pages/Dashboard';
 import Pancagatra from './pages/Pancagatra';
 import Covid from './pages/Covid';
+import Kalender from './pages/Kalender';
 
 import './style/style.css';
 
@@ -58,7 +59,7 @@ export const RootApp = (props) => {
 
                         <li>
                             <a href="#">
-                                <NavLink to="/pancagatra">
+                                <NavLink to="/kalender">
                                     <i className='bx bx-calendar' ></i>
                                     <span className="links_name">Kalender</span>
                                 </NavLink>
@@ -80,6 +81,7 @@ export const RootApp = (props) => {
                     <Route exact path="/" component={Dashboard} />
                     <Route path="/pancagatra" component={Pancagatra} />
                     <Route path="/covid" component={Covid} />
+                    <Route path="/kalender" component={Kalender} />
                 </section>
             </div>
         </HashRouter>
