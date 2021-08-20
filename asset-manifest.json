@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/siadhi_2/static/css/main.79da3337.chunk.css",
-    "main.js": "/siadhi_2/static/js/main.6dfef9a6.chunk.js",
-    "main.js.map": "/siadhi_2/static/js/main.6dfef9a6.chunk.js.map",
-    "runtime-main.js": "/siadhi_2/static/js/runtime-main.c08e38da.js",
-    "runtime-main.js.map": "/siadhi_2/static/js/runtime-main.c08e38da.js.map",
-    "static/css/2.f89c8abf.chunk.css": "/siadhi_2/static/css/2.f89c8abf.chunk.css",
-    "static/js/2.82fa636b.chunk.js": "/siadhi_2/static/js/2.82fa636b.chunk.js",
-    "static/js/2.82fa636b.chunk.js.map": "/siadhi_2/static/js/2.82fa636b.chunk.js.map",
-    "static/js/3.38d0e863.chunk.js": "/siadhi_2/static/js/3.38d0e863.chunk.js",
-    "static/js/3.38d0e863.chunk.js.map": "/siadhi_2/static/js/3.38d0e863.chunk.js.map",
+    "main.css": "/siadhi_2/static/css/main.564cce51.chunk.css",
+    "main.js": "/siadhi_2/static/js/main.e9ab2711.chunk.js",
+    "main.js.map": "/siadhi_2/static/js/main.e9ab2711.chunk.js.map",
+    "runtime-main.js": "/siadhi_2/static/js/runtime-main.f2cedc20.js",
+    "runtime-main.js.map": "/siadhi_2/static/js/runtime-main.f2cedc20.js.map",
+    "static/css/2.97acb448.chunk.css": "/siadhi_2/static/css/2.97acb448.chunk.css",
+    "static/js/2.8f6f4284.chunk.js": "/siadhi_2/static/js/2.8f6f4284.chunk.js",
+    "static/js/2.8f6f4284.chunk.js.map": "/siadhi_2/static/js/2.8f6f4284.chunk.js.map",
+    "static/js/3.d6e31d19.chunk.js": "/siadhi_2/static/js/3.d6e31d19.chunk.js",
+    "static/js/3.d6e31d19.chunk.js.map": "/siadhi_2/static/js/3.d6e31d19.chunk.js.map",
     "index.html": "/siadhi_2/index.html",
-    "static/css/2.f89c8abf.chunk.css.map": "/siadhi_2/static/css/2.f89c8abf.chunk.css.map",
-    "static/css/main.79da3337.chunk.css.map": "/siadhi_2/static/css/main.79da3337.chunk.css.map",
-    "static/js/2.82fa636b.chunk.js.LICENSE.txt": "/siadhi_2/static/js/2.82fa636b.chunk.js.LICENSE.txt",
+    "static/css/2.97acb448.chunk.css.map": "/siadhi_2/static/css/2.97acb448.chunk.css.map",
+    "static/css/main.564cce51.chunk.css.map": "/siadhi_2/static/css/main.564cce51.chunk.css.map",
+    "static/js/2.8f6f4284.chunk.js.LICENSE.txt": "/siadhi_2/static/js/2.8f6f4284.chunk.js.LICENSE.txt",
     "static/media/mdb.css": "/siadhi_2/static/media/arrow_right.f7c6ac6d.svg",
     "static/media/dutch-man.7c1e5761.svg": "/siadhi_2/static/media/dutch-man.7c1e5761.svg",
     "static/media/dutch-woman.2b15c486.svg": "/siadhi_2/static/media/dutch-woman.2b15c486.svg",
@@ -21,10 +21,10 @@
     "static/media/logo.6ce24c58.svg": "/siadhi_2/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c08e38da.js",
-    "static/css/2.f89c8abf.chunk.css",
-    "static/js/2.82fa636b.chunk.js",
-    "static/css/main.79da3337.chunk.css",
-    "static/js/main.6dfef9a6.chunk.js"
+    "static/js/runtime-main.f2cedc20.js",
+    "static/css/2.97acb448.chunk.css",
+    "static/js/2.8f6f4284.chunk.js",
+    "static/css/main.564cce51.chunk.css",
+    "static/js/main.e9ab2711.chunk.js"
   ]
 }
