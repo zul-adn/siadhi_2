@@ -1,61 +1,61 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Calendar from "@ericz1803/react-google-calendar";
-import { css } from "@emotion/react";
+import { Document, Page, pdfjs } from 'react-pdf';
+import { getPdf } from './../../store/app/action';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const API_KEY = "AIzaSyD9ccUUIz3gAY_wfk94Lnj-3H_mJpJXYdM";
 
-//replace calendar id with one you want to test
+export const Kalender = ({getPdf, datas_pdf}) => {
 
-let calendars = [
-    { calendarId: "09opmkrjova8h5k5k46fedmo88@group.calendar.google.com" }
-];
+    const [numPages, setNumPages] = React.useState(null);
+    const [pageNumber, setPageNumber] = React.useState(6);
 
-let styles = {
-    //you can use object styles
-    calendar: {
-        borderWidth: "3px" //make outer edge of calendar thicker
-    },
+    const URL = 'https://dinartech.com/siadhi/public/file/'
 
-    //you can also use emotion's string styles (remember to add the line 'import { css } from "@emotion/react";')
-    today: css`
-    /* highlight today by making the text red and giving it a red border */
-    color: red;
-    border: 1px solid red;
-    background-color: grey;
-  `
-};
+    React.useEffect(() => {
+        getPdf()
+    }, [])
 
-export const Kalender = (props) => {
+    function onDocumentLoadSuccess({ numPages }) {
+        setNumPages(numPages);
+    }
+
+
     return (
-        <div className="main-content">
-            <div className="header">
-                <p>Kalender Kamtibmas</p>
-            </div>
-            <div className="flex-row">
-                <div className="flex-col p-20 w-100">
+        <>
+            {datas_pdf.length === 0 ? "Loading" :
+                <div className="main-content">
+                    <div className="header">
+                        <p>Kalender Kamtibmas Polres Singkawang</p>
+                    </div>
+                    <div className="w-100 p-20" >
+                        <Document
 
-
-                    <div
-                        style={{
-                          paddingBottom: '10%'
-                        }}
-                    >
-                        <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />
-
+                            file={`${URL}${datas_pdf.kalender[0].nama_file}`}
+                            onLoadSuccess={onDocumentLoadSuccess}
+                        >
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24].map(pageNumber => (
+                                <Page pageNumber={pageNumber} />
+                            ))}
+                        </Document>
+                        {/* <p>Page {pageNumber} of {numPages}</p> */}
                     </div>
                 </div>
-            </div>
-        </div>
+            }
+        </>
     )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = ({ app }) => {
+    return {
+        datas_pdf: app.datas_pdf,
+    }
+}
 
-})
-
-const mapDispatchToProps = {
-
+const mapDispatchToProps = dispatch => {
+    return {
+        getPdf: () => dispatch(getPdf()),
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Kalender)

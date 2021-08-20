@@ -3,7 +3,10 @@ const initialState = {
     luas_chart: [],
     datas_pen: [],
     datas_tempat_ibadah: [],
-    datas_agama: []
+    datas_agama: [],
+    some_datas: [],
+    datas_pdf: [],
+    isLoading: true
 }
 
 export default (state = initialState, action) => {
@@ -28,6 +31,17 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 datas_agama: action.datas,
+            }
+        case 'STORE_SOME_DATA':
+            return {
+                ...state,
+                some_datas: action.datas,
+                isLoading: false
+            }
+        case 'STORE_PDF':
+            return {
+                ...state,
+                datas_pdf: action.datas,
             }
         default:
             return state

@@ -6,6 +6,8 @@ const storeDataGeo = (payload, chart) => ({ type: 'STORE_DATA_GEO', datas: paylo
 const storeDataPenduduk = (payload) => ({ type: 'STORE_DATA_PEN', datas: payload })
 const storeDataTempatIbadah = (payload) => ({ type: 'STORE_DATA_TEMPAT_IBADAH', datas: payload })
 const storeDataAgama = (payload) => ({ type: 'STORE_DATA_AGAMA', datas: payload })
+const storeSomeData = (payload) => ({ type: 'STORE_SOME_DATA', datas: payload })
+const storePDF = (payload) => ({ type: 'STORE_PDF', datas: payload })
 
 export const getDataGeo = () => {
     return (dispatch) => {
@@ -47,6 +49,26 @@ export const getAgama = () => {
             .then(response => {
                 console.log(response.data)
                 dispatch(storeDataAgama(response.data.data)) 
+            })
+    }
+}
+
+export const getSome = () => {
+    return (dispatch) => {
+        axios.get(`${url}/getsome`)
+            .then(response => {
+                console.log(response.data)
+                dispatch(storeSomeData(response.data.data)) 
+            })
+    }
+}
+
+export const getPdf = () => {
+    return (dispatch) => {
+        axios.get(`${url}/getpdf`)
+            .then(response => {
+                console.log(response.data)
+                dispatch(storePDF(response.data.data)) 
             })
     }
 }
