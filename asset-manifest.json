@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/siadhi_2/static/css/main.564cce51.chunk.css",
-    "main.js": "/siadhi_2/static/js/main.e9ab2711.chunk.js",
-    "main.js.map": "/siadhi_2/static/js/main.e9ab2711.chunk.js.map",
-    "runtime-main.js": "/siadhi_2/static/js/runtime-main.f2cedc20.js",
-    "runtime-main.js.map": "/siadhi_2/static/js/runtime-main.f2cedc20.js.map",
+    "main.css": "/siadhi_2/static/css/main.bcd7f5bf.chunk.css",
+    "main.js": "/siadhi_2/static/js/main.8650d80b.chunk.js",
+    "main.js.map": "/siadhi_2/static/js/main.8650d80b.chunk.js.map",
+    "runtime-main.js": "/siadhi_2/static/js/runtime-main.6aca9efc.js",
+    "runtime-main.js.map": "/siadhi_2/static/js/runtime-main.6aca9efc.js.map",
     "static/css/2.97acb448.chunk.css": "/siadhi_2/static/css/2.97acb448.chunk.css",
-    "static/js/2.8f6f4284.chunk.js": "/siadhi_2/static/js/2.8f6f4284.chunk.js",
-    "static/js/2.8f6f4284.chunk.js.map": "/siadhi_2/static/js/2.8f6f4284.chunk.js.map",
-    "static/js/3.d6e31d19.chunk.js": "/siadhi_2/static/js/3.d6e31d19.chunk.js",
-    "static/js/3.d6e31d19.chunk.js.map": "/siadhi_2/static/js/3.d6e31d19.chunk.js.map",
+    "static/js/2.d6200373.chunk.js": "/siadhi_2/static/js/2.d6200373.chunk.js",
+    "static/js/2.d6200373.chunk.js.map": "/siadhi_2/static/js/2.d6200373.chunk.js.map",
+    "static/js/3.2ceb49f9.chunk.js": "/siadhi_2/static/js/3.2ceb49f9.chunk.js",
+    "static/js/3.2ceb49f9.chunk.js.map": "/siadhi_2/static/js/3.2ceb49f9.chunk.js.map",
     "index.html": "/siadhi_2/index.html",
     "static/css/2.97acb448.chunk.css.map": "/siadhi_2/static/css/2.97acb448.chunk.css.map",
-    "static/css/main.564cce51.chunk.css.map": "/siadhi_2/static/css/main.564cce51.chunk.css.map",
-    "static/js/2.8f6f4284.chunk.js.LICENSE.txt": "/siadhi_2/static/js/2.8f6f4284.chunk.js.LICENSE.txt",
+    "static/css/main.bcd7f5bf.chunk.css.map": "/siadhi_2/static/css/main.bcd7f5bf.chunk.css.map",
+    "static/js/2.d6200373.chunk.js.LICENSE.txt": "/siadhi_2/static/js/2.d6200373.chunk.js.LICENSE.txt",
     "static/media/mdb.css": "/siadhi_2/static/media/arrow_right.f7c6ac6d.svg",
     "static/media/dutch-man.7c1e5761.svg": "/siadhi_2/static/media/dutch-man.7c1e5761.svg",
     "static/media/dutch-woman.2b15c486.svg": "/siadhi_2/static/media/dutch-woman.2b15c486.svg",
@@ -21,10 +21,10 @@
     "static/media/logo.6ce24c58.svg": "/siadhi_2/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f2cedc20.js",
+    "static/js/runtime-main.6aca9efc.js",
     "static/css/2.97acb448.chunk.css",
-    "static/js/2.8f6f4284.chunk.js",
-    "static/css/main.564cce51.chunk.css",
-    "static/js/main.e9ab2711.chunk.js"
+    "static/js/2.d6200373.chunk.js",
+    "static/css/main.bcd7f5bf.chunk.css",
+    "static/js/main.8650d80b.chunk.js"
   ]
 }
