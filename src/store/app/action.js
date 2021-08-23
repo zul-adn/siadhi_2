@@ -8,6 +8,35 @@ const storeDataTempatIbadah = (payload) => ({ type: 'STORE_DATA_TEMPAT_IBADAH', 
 const storeDataAgama = (payload) => ({ type: 'STORE_DATA_AGAMA', datas: payload })
 const storeSomeData = (payload) => ({ type: 'STORE_SOME_DATA', datas: payload })
 const storePDF = (payload) => ({ type: 'STORE_PDF', datas: payload })
+const setLogin = () => ({ type: 'SET_LOGIN' })
+
+export const cekLogin = () => {
+    return (dispatch) => {
+        const cek = localStorage.getItem("login")
+        console.log(cek)
+        if(cek){
+            dispatch(setLogin()) 
+        }else{
+            console.log("do nothing...")
+        }
+    }
+}
+
+export const Login = (payload) => {
+    return (dispatch) => {
+        axios.post(`${url}/loginuser`, payload)
+            .then(response => {
+                console.log(response.data.status)
+                if(response.data.status === 1){
+                    localStorage.setItem("login", true)
+                    dispatch(setLogin()) 
+                }else{
+                    alert("Username atau Password salah")
+                }
+                
+            })
+    }
+}
 
 export const getDataGeo = () => {
     return (dispatch) => {

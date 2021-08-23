@@ -6,7 +6,8 @@ const initialState = {
     datas_agama: [],
     some_datas: [],
     datas_pdf: [],
-    isLoading: true
+    isLoading: true,
+    isLogin: false
 }
 
 export default (state = initialState, action) => {
@@ -42,6 +43,11 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 datas_pdf: action.datas,
+            }
+        case 'SET_LOGIN':
+            return {
+                ...state,
+                isLogin: !state.isLogin
             }
         default:
             return state

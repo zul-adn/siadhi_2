@@ -431,3 +431,13 @@
     height: 100% !important;
     
 }
+
+
+.mdb-dataTable-head{
+    background-color: #04aa6d !important;
+    color: #fff;
+}
+
+.mdb-datatable-filter{
+    margin-bottom: 20px;
+}

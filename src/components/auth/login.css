@@ -1,0 +1,21 @@
+
+.container{
+    height: 100vh;
+    width: 100Vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.card{
+    width: 30%;
+    height: auto;
+    background-color: aqua;
+    padding: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
