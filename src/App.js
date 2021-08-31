@@ -15,3 +15,5 @@ function App() {
 }
 
 export default App;
+
+// "homepage": "http://zul-adn.github.io/siadhi_2",

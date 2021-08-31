@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'https://dinartech.com/siadhi/public/api'
+const url = 'https://polres-singkawang.com/siadhi/public/api'
 
 const storeDataGeo = (payload, chart) => ({ type: 'STORE_DATA_GEO', datas: payload, luas_chart: chart })
 const storeDataPenduduk = (payload) => ({ type: 'STORE_DATA_PEN', datas: payload })

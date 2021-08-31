@@ -9,7 +9,7 @@ export const Covid = ({ getPdf, datas_pdf }) => {
     const [numPages, setNumPages] = React.useState(null);
     const [pageNumber, setPageNumber] = React.useState(6);
 
-    const URL = 'https://dinartech.com/siadhi/public/file/'
+    const URL = 'https://polres-singkawang.com/siadhi/public/file/'
 
     React.useEffect(() => {
         getPdf()
